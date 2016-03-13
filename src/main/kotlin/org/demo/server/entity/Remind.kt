@@ -18,13 +18,13 @@ data class Remind(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
         @GenericGenerator(name = "increment", strategy = "increment")
-        var id: Long,
+        var id: Long = 0,
 
         @Column(name = "title", nullable = false, length = 50)
-        var title: String,
+        var title: String = "",
 
         // @see http://www.thoughts-on-java.org/persist-localdate-localdatetime-jpa/
         @Column(name = "remind_date", nullable = false)
         @Convert(converter = LocalDateTimeAttributeConverter::class)
-        var remindDate: LocalDateTime
+        var remindDate: LocalDateTime = LocalDateTime.now()
 )

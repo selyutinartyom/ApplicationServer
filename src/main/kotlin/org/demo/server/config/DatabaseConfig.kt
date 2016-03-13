@@ -68,7 +68,7 @@ open class DatabaseConfig {
     }
 
     @Bean
-    open fun platformTransactionManager(): PlatformTransactionManager {
+    open fun transactionManager(): PlatformTransactionManager {
         val manager = JpaTransactionManager()
         manager.entityManagerFactory = entityManagerFactory().`object`
 

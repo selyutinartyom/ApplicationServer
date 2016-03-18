@@ -9,5 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository
  * @author Secundus
  * @since 14.03.2016 0:32
  */
-open interface RemindRepository : JpaRepository<Remind, Long> {
+interface RemindRepository : JpaRepository<Remind, Long> {
 }

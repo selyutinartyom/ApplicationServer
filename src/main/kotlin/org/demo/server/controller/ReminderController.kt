@@ -4,11 +4,9 @@ import org.demo.server.entity.Remind
 import org.demo.server.repository.RemindRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.ui.ModelMap
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestMethod
-import org.springframework.web.bind.annotation.ResponseBody
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import java.time.LocalDateTime
+import javax.servlet.http.HttpServletResponse
 
 /**
  * Контроллер для напоминаний
@@ -25,6 +23,11 @@ open class ReminderController @Autowired constructor(val remindRepository : Remi
     fun getReminder(model: ModelMap): Remind {
 //        val list: List<Remind> = remindRepository.findAll()
         return createMockRemind()
+    }
+
+    @RequestMapping(value = "/set", method = arrayOf(RequestMethod.POST))
+    fun setReminder(response: HttpServletResponse, @RequestBody remind: Remind): Remind {
+        return remind
     }
 
     private fun createMockRemind(): Remind {

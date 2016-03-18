@@ -9,7 +9,7 @@ buildscript {
     ext.hibernate_version = '5.1.0.Final'
     ext.postgresql_version = '9.1-901-1.jdbc4'
     ext.dbcp2_version = '2.1.1'
-    ext.jackson_databind = '2.7.2'
+    ext.jackson = '2.7.3'
     repositories {
         mavenCentral()
     }
@@ -53,7 +53,10 @@ dependencies {
     compile "javax.servlet:javax.servlet-api:$servlet_api_version"
 
     // JSON Converter
-    compile "com.fasterxml.jackson.core:jackson-databind:$jackson_databind"
+    compile "com.fasterxml.jackson.core:jackson-core:$jackson"
+    compile "com.fasterxml.jackson.core:jackson-annotations:$jackson"
+    compile "com.fasterxml.jackson.core:jackson-databind:$jackson"
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jackson"
 
     // Database
     compile "org.springframework.data:spring-data-jpa:$spring_data_jpa_version"

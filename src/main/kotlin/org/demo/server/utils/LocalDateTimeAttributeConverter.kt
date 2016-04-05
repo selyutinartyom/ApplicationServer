@@ -6,10 +6,9 @@ import javax.persistence.AttributeConverter
 import javax.persistence.Converter
 
 /**
- * Конвертер java.time.LocalDateTime в/из java.sql.Timestamp
-
+ * Converter java.time.LocalDateTime to/from java.sql.Timestamp
+ *
  * @author Secundus
- * *
  * @since 13.03.2016 18:26
  */
 @Converter(autoApply = true)

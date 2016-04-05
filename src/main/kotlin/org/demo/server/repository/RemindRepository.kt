@@ -4,7 +4,7 @@ import org.demo.server.entity.Remind
 import org.springframework.data.jpa.repository.JpaRepository
 
 /**
- * Репозиторий Напоминание.
+ * Remind Repository
  *
  * @author Secundus
  * @since 14.03.2016 0:32

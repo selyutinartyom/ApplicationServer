@@ -6,7 +6,7 @@ import java.time.LocalDateTime
 import javax.persistence.*
 
 /**
- * Сущность Напоминание.
+ * Remind Entity
  *
  * @author Secundus
  * @since 13.03.2016 13:52

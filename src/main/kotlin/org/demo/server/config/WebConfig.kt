@@ -16,7 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import java.time.LocalDateTime
 
 /**
- * Конфтгурация Web контекста Spring
+ * Spring Web context configuration
  *
  * @author Secundus
  * @since 12.03.2016 14:50

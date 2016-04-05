@@ -9,7 +9,7 @@ import javax.servlet.ServletContext
 import javax.servlet.ServletRegistration
 
 /**
- * Инициализация контекста Spring
+ * Spring context initialization
  *
  * @author Secundus
  * @since 12.03.2016 13:05
